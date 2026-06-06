@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Gift</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <audio id="bgMusic" loop preload="auto">
+        <source src="song.mp3.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="phone-wrapper">
+        <div class="top-sticker-container">
+            <img src="https://media.tenor.com/7S8_oZ_E_p0AAAAi/mochi-peach-cat-cute.gif" id="header-gif" class="floating-sticker">
+        </div>
+
+        <div id="slide1" class="slide active">
+            <div class="content-card start card">
+                <h1 class="cursive start-title">Happy Birthday Kashan🎉🎂🎈🥳!</h1>
+                <P> Our Future Together A Little Glimpse Of The Life We're Creating Together...🫂👀🖤></P>
+                <p class="start text">I Have a Little Secret For You....🤫</p>
+
+                <button class="btn open purple-btn" onclick="startEverything()">OPEN NOW</button>
+            </div>
+        </div>
+
+        <div id="slide2" class="slide">
+            <div class="content-card">
+                <h2 class="slide-title">How It All Started🖤🫠</h2>
+                <p>It begins with the Simple hello and specially stickers fight🤧😂 but with the time Everything Changes. From Random Chats To Endless Laughter, and that one day with the very first day of new year Our story found It's Start🫠</p>
+                <div class="nav-btns">
+                    <button class="btn pink-btn" onclick="nextSlide(1)">BACK</button>
+                    <button class="btn purple-btn" onclick="nextSlide(3)">NEXT</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="slide3" class="slide">
+            <div class="content-card">
+                <h2 class="slide-title">How It’s Going💖🎇</h2>
+                <p>We Do Fights Everytime 🤧✌🏻... But that's not really like a serious fight, you like to annoy me with new new names like my latest name "KHOYE WALI BARFI" and I start fight but In the End You always say sorry That makes me Awwwww🥹 bachaa 
+We always find our way back to Each Other. Because This bond means more than any fight ever could.🫶🏻💗</p>
+                <div class="nav-btns">
+                    <button class="btn pink-btn" onclick="nextSlide(2)">BACK</button>
+                    <button class="btn purple-btn" onclick="nextSlide(4)">NEXT</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="slide4" class="slide">
+            <div class="content-card">
+                <h2 class="slide-title">I Promise You</h2>
+                <ul class="promise-list">
+                    <li>I'll Always Listen To Your Heart.😘</li>
+                    <li>I'll Never Stop Caring, No Matter What.💖</li>
+                    <li>I'll Always Choose You, Every Single Day.😘</li>
+                    <li>I'll Stay By Your Side Through Everything.❣️</li>
+                </ul>
+                <div class="nav-btns">
+                    <button class="btn pink-btn" onclick="nextSlide(3)">BACK</button>
+                    <button class="btn purple-btn" onclick="nextSlide(5)">NEXT</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="slide5" class="slide">
+            <div class="content-card">
+                <h2 class="slide-title">A Special Message❤️😘</h2>
+                <div id="msg-box" class="tap-box" onclick="revealBirthdayMsg()">Tap to open 🎁</div>
+                <div id="full-msg" class="hidden-msg">
+                    <p>Every Moment With You Feels Like A Small Piece Of Our Forever. We Have Laughed, Dreamed, And This Is Just The Beginning. No Matter Where Life Takes Us, I'll Always Hold These Memories Close. You Are Not Just My Present, You're My Favorite Part Of Every Tomorrow...💗</p>
+                </div>
+                <div class="nav-btns">
+                    <button class="btn pink-btn" onclick="nextSlide(4)">BACK</button>
+                    <button id="next-after-tap" class="btn purple-btn hidden" onclick="nextSlide(6)">NEXT</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="slide6" class="slide">
+            <div class="content-card letter-card">
+                <h2 class="slide-title">THANKYOU FOR EVERYTHING CHIKU</h2>
+                <div class="scroll-area">
+                    <p> Thankyou For Always Being There When I Needed Someone. You Make Moments Feel Special Just By Being A Part Of Them..😭❤️</p>
+                </div>
+                <button class="btn purple-btn" onclick="nextSlide(7)">ROOH E JAAN NEXT😘</button>
+            </div>
+        </div>
+
+        <div id="slide7" class="slide">
+            <div class="content-card">
+                <h2 class=" slide-title">SPECIAL MESSAGE FOR MY JAAN💘</h2>
+                <p>جس جگہ قدم رکھیں وہ جہاں مبارک ہو🫠💋
+ایک حسین پنچھی کو آسمان مبارک ہو🌷
+ساری خوشیاں مل جائیں جن پر آ پ کا حق ہو🎀✨
+دو روشن آ نکھوں کو جنم دن مبارک ہو... 🖤🫠😘</p>
+                <button class="btn purple-btn" onclick="nextSlide(8)">NEXT🖤</button>
+                </div>
+        </div>
+
+        <div id="slide8" class="slide">
+            <div class="content-card">
+                <h2 class="sans seif">Special Letter for You </h2>
+                <p>​Hey ALBI...❤️🤭Aj Thora Ziyada Miss Kr Rahi Hoon Apko Socha Likh Deti Hon Long Distance Easy Nahi Hota I know, But Ap K Saat Sab Thora Manageable Lagta HAI. AP Se Baat Kr K Din Better Hoo Jata HAI , Hnn Beshak Aik DIN Main BHaly Kitni He Larai Kr Lein Hum Phir Bhi Tumhari Company Bht Pasand Hai Mujhe 😋🥹. And I Really Miss Your Way of Caring About Me 🤭. Even Dur Hoo K Bhi You Make Me Feel Close. 😭😭😭😭❤️🫂🫠. I'm Very very Veryyyyyyy Happy With My Molvi Sahab 😋. Distance Hai But Feelings Bilkol 💯 Real Hain 🫣🤭💗. Missing You My Chirkuttt 💓🕊️ Mana Tora Dostan 🫠🤍. </p>
+                <button class="btn purple-btn" onclick="nextSlide(9)">NEXT💕</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide" id="slide9">
+    <div class="content-card">
+        <h3 class="BOLD">A SPECIAL MESSAGE FOR MY JAAN❤️</h3>
+        <div class="scroll-area">​​HAPPY BIRTHDAY🥳🥳🥳🥳🥳✨🌷 My KHAROOS, My Lambuu, My MOLVI SAHAB, My Chikuu AND One And Only My Bachawww! You deserve all the happiness, love, and smiles in the world today and always. You have this special way of making everything around you brighter, your smile, your kindness, and the way you make people feel truly cared heart happy. You're truly one of a kind, and I just want you to know how special you are. Keep being the amazing person you are, spreading joy wherever you go. Wishing you endless happiness, success, and all the sweet things life has to offer. 💗❤️
+        </div>
+        <button class="btn purple-btn" onclick="nextSlide(10)">Next Page ✨</button>
+    </div>
+</div>
+
+<div class="slide" id="slide10">
+    <div class="content-card">
+        <h3 class="cursive">A Special Message for My Khoye Wali Barfii</h3>
+        <div class="scroll-area">
+
+​HAPPY BIRTHDAY To The Most Amazing Man And BEAUTIFUL SOUL In My Life. 
+You Make My World Brighter Just By Being In It. Every Smile Of Yours Feels Like a Gift Meant Just For Me. 
+THANKYOU For Loving Me😘😘 Supporting Me🥹💝, And Understanding Me Through Everything.
+​With You, Every Moment Becomes Special And Meaningful. I Wish You Endless Happiness, Success, And Peace Today And Always. 
+I'm Grateful Every Day That I Get To Call You Mine.
+​HAPPY BIRTHDAY,🎉🎉🎉🎆❤️ My Chikuu! Here’s To Many More Years Of Laughter, 
+Love, And Building BEAUTIFUL Memories Together. 💝💖
+</div>
+        <button class="btn pink-btn" onclick="nextSlide(11)">NEXT VITA MIAA✨</button>
+    </div>
+</div>
+
+<div class="slide" id="slide11">
+    <div class="content-card">
+        <h3 class="cursive">Meri Dua And Birthday Wishes... ❤️🌸</h3>
+        <div class="scroll-area" style="direction: rtl; font-size: 16px; text-align: right;">
+            میری دعا ہے کہ خواہشوں کے سمندر کے سب موتی آپ کا مقدر ہوں،
+             پھول چہرے پھول لہجے آپکے ہمسفر ہوں۔ ✨
+            دیر ہوسکتی ہے یاد کرنے میں
+             لیکن آپ کو بھولا دیں گے یہ خیال دل سے بھولا دیں...
+              پھول بھی ہیں بہت حسین مگر آپ پھولوں سے بھی خوبصورت ہو۔ ❤️😘
+
+              ✿ʜᴀᴩᴩʏ ʙɪʀʏʜᴅᴀʏ✿ ❤️☺️
+
+HAPPY BIRTHDAY KASHAN💝 
+Allah Paak Ap Ko Hamesha Khush or Abaad Rkhe Hamesha HANSTA MusKURATA RaKhEin PhoOloN Ki TrhaN🌷🖤HAPPY BIRTHDAY BACHAAAA 🌷🖤✨😘
+ALLAH APKI SARI DILI MURANDEIN PURI KAREIN APKO SEHAT WALI LAMBI UMER ATTA KAREIN OR APKO MERE SAAT HAMESHA KHUSHHHHH RAKEINNNN ALLAH JIII AMEENNNNNNN AMEENNNNNN AMEENNNNNN SUMAMEENNNNNN AMEENNNNN.💞
+سالگرہ مبارک الله آپکو ہنستا مسکراتا رکھے ہمیشہ آمین!... اللہ لمبی زندگی دے آپکو صرف خوشیاں ہی ملیں زندگی میں آپکو آمین آمین 🖤💐
+**HAPPY BIRTHDAY **💝 I hope all your birthday wishes and dreams come true 💕🌸
+
+        </div>
+        <button class="btn purple-btn" onclick="nextSlide(12)">NEXT PAGE ✨</button>
+    </div>
+</div>
+
+<div class="slide" id="slide12">
+    <div class="content-card">
+        <h3 class="cursive">My Reason to Smile 😊</h3>
+        <div class="scroll-area">💕𝗛𝗔𝗣𝗣𝗬 𝗕𝗜𝗥𝗧𝗛𝗗𝗔𝗬 𝗠𝗢𝗛𝗧𝗥𝗔𝗠💕
+            آپ تمنا کریں جن حسین لمحوں کی
+وہ لمحے آپکے قدموں میں ہوں💖
+خدا آپ کو وہ سب کچھ حقیقت میں دے
+جو سوچا ہوا ہے آپ نے ( آمین آمین )💐🤍
+𝐌𝐚𝐧𝐲 𝐌𝐚𝐧𝐲 𝐫𝐞𝐭𝐮𝐫𝐧 𝐨𝐟 𝐭𝐡𝐞 𝐝𝐚𝐲🎂🎀𝐠𝐨𝐨𝐝 𝐛𝐥𝐞𝐬𝐬 𝐮𝐡𝐡𝐡 𝐈 𝐰𝐚𝐧𝐭 𝐭𝐨 𝐰𝐢𝐬𝐡 𝐮𝐡𝐡  𝐡𝐚𝐩𝐩𝐲 𝐥𝐢𝐟𝐞💐💫𝐀𝐥𝐰𝐚𝐲𝐬 𝐤𝐞𝐞𝐩 𝐬𝐦𝐢𝐥𝐞 𝐨𝐧 𝐮𝐡𝐡 𝐟𝐚𝐜𝐞 𝐧𝐝 𝐠𝐫𝐞𝐚𝐭 𝐬𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥 𝐩𝐞𝐫𝐬𝐨𝐧 𝐭𝐡𝐚𝐭 𝐰𝐚𝐲 ❤️𝐻𝑎𝑝𝑝𝑦 𝐵𝑖𝑟𝑡ℎ𝑑𝑎𝑦🎂🎊🎊🎊🤍 𝑊𝑖𝑠ℎ 𝑌𝑜𝑢 𝑀𝑎𝑛𝑦 𝑀𝑎𝑛𝑦 𝐻𝑎𝑝𝑝𝑦 𝑅𝑒𝑡𝑢𝑟𝑛𝑠 𝑂𝑓 𝑇ℎ𝑒 Day💗💐 𝑾𝒊𝒔𝒉𝒊𝒏𝒈 𝒀𝒐𝒖 𝑬𝒗𝒆𝒓𝒚𝒕𝒉𝒊𝒏𝒈 𝑻𝒉𝒂𝒕 𝑩𝒆𝒊𝒏𝒈 𝑯𝒂𝒑𝒑𝒊𝒏𝒆𝒔𝒔..𝑭𝒐𝒓 &  𝑨𝒍𝒘𝒂𝒚𝒔 𝑾𝒆 𝑯𝒐𝒑𝒆 𝑬𝒗𝒆𝒓𝒚𝒅𝒂𝒚 𝑷𝒖𝒕𝒔 𝑨 𝑺𝒎𝒊𝒍𝒆 𝑶𝒏 𝒀𝒐𝒖𝒓 𝑭𝒂𝒄𝒆 𝑨𝒏𝒅 𝑾𝒉𝒂𝒕𝒆𝒗𝒆𝒓 𝒀𝒐𝒖 𝑾𝒊𝒔𝒉 𝑭𝒐𝒓 𝑪𝒐𝒎𝒆𝒔 𝑻𝒓𝒖𝒆🙂🖤 𝑲𝒆𝒆𝒑 𝑺𝒎𝒊𝒍𝒆𝒊𝒏𝒈 & 𝑺𝒉𝒊𝒏𝒆 𝑩𝒓𝒊𝒈𝒉𝒕 🤧💖 𝑴𝒂𝒚 𝑻𝒉𝒆 𝑮𝒐𝒐𝒅 𝑩𝒍𝒆𝒔𝒔 𝒀𝒐𝒖 🖤  جس جگہ قدم رکھیں وہ جہاں مبارک ہو🫠💋
+ایک حسین پنچھی کو آسمان مبارک ہو🌷
+ساری خوشیاں مل جائیں جن پر آ پ کا حق ہو🎀✨
+دو اداس آ نکھوں کو 
+جنم دن مبارک ہو... 🖤🫠😘😘🤍
+        </div>
+        <button class="btn pink-btn" onclick="nextSlide(13)">NEXT MOHTRAM 🤭✨</button>
+    </div>
+</div>
+
+<div class="slide" id="slide13">
+    <div class="content-card">
+        <h3 class="cursive">Meri Dua Mere Ann K Name... 😘✨</h3>
+        <div class="scroll-area" style="direction: rtl; font-size: 16px; text-align: right;">
+            🌸ᕼᗩᑭᑭY ᗷIᖇTᕼᗪᗩY TO ᑌᕼᕼ Kᗩᔕᕼᗩᑎ🌸
+Happy Birthday to my favorite person, my best friend, my safe place, my biggest happiness and literally my everything 🤍✨
+Mi amor 😘 💕 
+
+You are not just a person in my life… you ARE the best part of it.
+Meri har smile ke peachy kahin na kahin sirf tum hi😭💖
+Life honestly feels less boring, more beautiful, and full of chaos in a cute way because of you 😂
+
+Thank you for being my personal therapist, comedian, bodyguard, bestie, and sometimes unpaid emotional support 😭🤌🏻 
+
+I pray that Allah gives you endless happiness, success, peace, and all the love you deserve.
+Aur han, thora sa kharuss kam ho jao birthday gift ke tor par 😭🎂
+
+You deserve the entire universe, but sadly abhi ke liye meri duaen aur mera pyaar hi available hai 🙈🫣🌍🤍
+
+Stay happy, stay mine, stay annoying forever 🫶🏻
+Happy Birthday once again, meri jaan, mery chiku, meri duniya 💌🎉 
+And one more thing I confess on your biggest day 🫣✌🏻
+
+Seni Seviyorum, Kaşan Bey 🙈🫶🏻💗
+Za ta Sara mena komm❤️‍🔥👀
+Da khola ba drla mata km.  Anddd 
+Ana uhibukki 💓🥳🥹🫠 
+Once again HAPPY BIRTHDAY KASHAN MINE EVERYTHING CHIKU 🫠💕 STAY HAPPY AND STAY MINE😘💐
+            وقت آپکو ہمیشہ خوش رکھے ... 🌹
+            <br><br>
+            بہاریں آپ پر فدا ہو جائیں قسمت کا قلم اگر آپ کے لیے کوئی دکھ لکھنے کا ارادہ رکھتا ہو تو میں خدا کے سامنے سر جھکا کر دعا کرتی ہوں کہ ایسا کرنے سے پہلے قسمت کی ہی یاداشت کھو جائے اور وہ آپ کے نام دکھ لکھنا بھول جائے! 
+            <br><br>
+            آمین SumAmeen.. ❤️
+        </div>
+        <button class="btn purple-btn" onclick="nextSlide(1)">Restart ❤️</button>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>

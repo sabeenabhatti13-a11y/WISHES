@@ -1,0 +1,52 @@
+body {
+    margin: 0; padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #fce4ec;
+    background-image: radial-gradient(#f8bbd0 1px, transparent 1px);
+    background-size: 20px 20px;
+    display: flex; justify-content: center; align-items: center; height: 100vh;
+    overflow: hidden;
+}
+
+.phone-wrapper {
+    width: 350px; height: 600px;
+    position: relative; padding-top: 100px;
+}
+
+.top-sticker-container {
+    position: absolute; top: 0; left: 0; width: 100%;
+    display: flex; justify-content: center; z-index: 1000;
+    pointer-events: none;
+}
+
+.floating-sticker { 
+    width: 120px !important; 
+    height: auto;
+    animation: bounce 2s infinite; 
+    display: block !important;
+}
+
+.slide { display: none; flex-direction: column; align-items: center; animation: fadeIn 0.5s ease; }
+.slide.active { display: flex; }
+
+.content-card {
+    background: white; padding: 25px; border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05); text-align: center;
+    width: 85%; border: 1px solid #f8bbd0;
+}
+
+.cursive { font-family: 'Great Vibes', cursive; color: #d81b60; font-size: 40px; }
+.slide-title { color: #880e4f; font-size: 20px; margin-bottom: 15px; }
+
+.btn { border: none; padding: 10px 20px; border-radius: 20px; color: white; font-weight: bold; margin: 5px; cursor: pointer; }
+.purple-btn { background: #9c27b0; box-shadow: 0 4px 10px rgba(156, 39, 176, 0.3); }
+.pink-btn { background: #ec407a; }
+
+.tap-box { background: #fff; padding: 20px; border-radius: 15px; border: 2px dashed #ec407a; color: #ec407a; font-weight: bold; }
+.hidden-msg { display: none; font-size: 13px; color: #555; }
+.hidden { display: none; }
+
+.scroll-area { max-height: 180px; overflow-y: auto; text-align: left; font-size: 13px; background: #fffafa; padding: 10px; border-radius: 10px; }
+
+@keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; } }
